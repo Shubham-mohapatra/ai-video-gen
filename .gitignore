@@ -10,6 +10,12 @@
 !.yarn/releases
 !.yarn/versions
 
+# Backend dependencies
+backend/node_modules/
+backend/uploads/
+backend/outputs/
+backend/temp/
+
 # testing
 /coverage
 
@@ -32,6 +38,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+backend/.env
 
 # vercel
 .vercel
@@ -39,3 +46,34 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Large binary files - use Git LFS if needed
+*.exe
+*.dll
+*.so
+*.dylib
+
+# OS generated files
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
